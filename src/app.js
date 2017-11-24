@@ -25,7 +25,7 @@ document.body.appendChild( renderer.domElement );
 var geometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
 // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 var material = new THREE.ShaderMaterial({
-    uniforms: { "time": { value: 0.5 }, "uniform2": { value: 2 } },
+    uniforms: { "time": { value: 0.5 }, "time2": { value: 2 } },
     vertexShader: document.getElementById('vertexShader').textContent,
     fragmentShader: document.getElementById('fragmentShader').textContent
 });
@@ -43,6 +43,7 @@ var animate = function () {
     // cube.rotation.y += 0.01;
     // uniforms.time.value += 0.01;
     cube.material.uniforms.time.value += 0.1;
+    cube.material.uniforms.time2.value += 0.1;
     renderer.render(scene, camera);
 };
 
