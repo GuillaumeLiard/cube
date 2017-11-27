@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>My first three.js app</title>
+		<title>Simple vertex & fragment shaders</title>
 		<style>
 			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
+			canvas { width: 100%; height: 100%; }
 		</style>
 	</head>
 	<body>
@@ -37,7 +37,7 @@
 		  for(int i=1;i<9;i++)
 		  {
 		    	vec2 newp=p;
-			float ii = float(i);
+				float ii = float(i);
 		    	newp.x+=0.55/ii*time*0.11+p.y*0.01*time/ii+sin(p.x*4.1+time*0.813)*0.21+0.12*cos(p.y*22.3*0.212)*0.1;
 		    	newp.y+=0.55/ii*cos(ii*Pi*p.x+time*.01+sin((time/(10.*ii))*ii));
 		    	p=newp;
